@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <title>Bashar's Real Time Poll</title>
+  <style>.hidden { display: none; }</style>
+</head>
+
+<body style="background: #b3bbaf;">
+  <div class="container">
+    <h1 style="color:white">Bashar's Real Time Polling Application</h1>
+	<a target="_blank" class="waves-effect waves-light btn red" href="https://ournewdocument.herokuapp.com/index.html">Documentation</a>
+	<a target="_blank" class="waves-effect waves-light btn red" href="https://www.youtube.com/watch?v=bmYnaxQGKe8&t=20s">Site Tour</a>
+	<a target="_blank" class="waves-effect waves-light btn red" href="https://findbashar.com">Bashar's Portfolio</a>
+	<div class="row">
+    <div class="col s12 m6">
+      <div class="card red darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Alert</span>
+          <p>This is a real time pusher application. So, if you wanna see the full impact try to use different browser or devices to see how the graph and total vote count both are changing in realtime. For any query, just contact Bashar at 01834663387. Thank you.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <p style="color:white">Vote for your favorite OS to develop on</p>
+    <div id="hasVotedAlreadyErrorMsg" class="card-panel hidden" style="width: 30%">
+      <span class="red-text text-darken-2">You have already voted, you can only vote once.</span>
+    </div>
+    <form id="vote-form">
+      <p>
+        
+            <input type="radio" name="os" id="windows" value="Windows" required>
+            
+        <label style="color:white" for="windows">windows</label>
+      </p>
+	  <p>
+        
+            <input type="radio" name="os" id="MacOS" value="MacOS">
+            
+        <label style="color:white" for="MacOS">MacOS</label>
+      </p>
+	  <p>
+        
+            <input type="radio" name="os" id="Linux" value="Linux">
+            
+        <label style="color:white" for="Linux">Linux Distro</label>
+      </p>
+	  <p>
+        
+            <input type="radio" name="os" id="other" value="Other">
+            
+        <label style="color:white" for="other">Something else</label>
+      </p>
+        
+      
+      
+      <input type="submit" value="Vote" class="btn">
+    </form>
+
+    <br>
+    <br>
+    
+    <h5 style="text-align: center;color:white" id="chartTitle"></h5>
+    <div id="chartContainer" style="height: 300px;width:100%"></div>
+	<p style="margin-left:38%;color:white">Copyright &copy; All rights reserved by <a style="color:#9797b7;" target="_blank" href="https://findbashar.com/">Bashar</a></p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
