@@ -1,28 +1,28 @@
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 
-// DB Config
+          app.use(express.static(path.join(__dirname, 'public')));
 
-require('./config/db');
-const app = express();
+          
+                    app.use(bodyParser.json());const express = require('express');
+                    const path = require('path');
+                    const bodyParser = require('body-parser');
+                    const cors = require('cors');
 
-const poll = require('./routes/poll');
+            
 
-// Set public folder
-app.use(express.static(path.join(__dirname, 'public')));
+            require('./config/db');
+            const app = express();
 
-// Body parser middleware
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+            const poll = require('./routes/poll');
 
-// Enable CORS
-app.use(cors());
+            
+            app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use('/poll', poll);
-app.use(express.static(path.join(__dirname, 'public')));
-const port = process.env.PORT ||3000;
+        
+        app.use(cors());
 
-// Start server
-app.listen(port, () => console.log(`Server started on port ${port}`));
+                  app.use('/poll', poll);
+                  app.use(express.static(path.join(__dirname, 'public')));
+        const port = process.env.PORT ||3000;
+
+        
+       console.log(`Server started on port ${port}`));
