@@ -12,7 +12,7 @@
         
                                 });
 
-                // Create collection and add schema
+                
                 const Vote = mongoose.model('Vote', VoteSchema);
 
                 module.exports = Vote;
